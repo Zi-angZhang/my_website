@@ -1,0 +1,83 @@
+%        File: index.tex
+%     Created: Thu Aug 13 04:00 PM 2020 +0
+% Last Change: Thu Aug 13 04:00 PM 2020 +0
+%
+\documentclass[a4paper, 11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\usepackage[colorinlistoftodos, textsize=tiny]{todonotes}
+\usepackage[super]{cite}
+\bibliographystyle{ieeetr}
+\usepackage[]{amsmath}
+\numberwithin{equation}{subsection}
+\usepackage{xcolor}
+\usepackage[]{graphicx}
+% color for general purposes
+\definecolor{salmon}{RGB}{250, 128, 114}
+\definecolor{grey}{RGB}{97, 97, 97}
+\definecolor{bluegrey}{RGB}{96, 125, 139}
+\definecolor{darkorange}{RGB}{245, 124, 0}
+%color for listing block aka coding block
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{codebackground}{rgb}{0.95,0.95,0.92}
+\definecolor{codeterminalbackground}{rgb}{0.95,0.95,0.95}
+
+\usepackage{listings}
+\lstdefinestyle{python}{
+	backgroundcolor=\color{codebackground},   
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{magenta},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	basicstyle=\ttfamily\footnotesize,
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=left,                    
+	numbersep=5pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=4
+}
+\lstdefinestyle{terminal}{
+	backgroundcolor=\color{codeterminalbackground},
+	stringstyle=\color{black},
+	basicstyle=\ttfamily\footnotesize,
+	breakatwhitespace=false,
+	breaklines=true,                 
+	captionpos=b,                    
+	keepspaces=true,                 
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=4,
+	numbers=none
+}
+\lstset{language=Python, style=python}
+
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true, 
+	linkcolor=grey, 
+	filecolor=grey,      
+	urlcolor=bluegrey,
+}
+
+\title{DFT notes}
+\author{Ziang Zhang \\ \texttt{ziang.zhang@kaust.edu.sa}}
+\date{\today}
+
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+
+\newpage
+%\bibliography{references}
+\end{document}
+
