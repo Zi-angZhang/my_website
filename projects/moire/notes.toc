@@ -1,0 +1,6 @@
+\contentsline {section}{\numberline {1}Appendix}{2}{section.1}
+\contentsline {subsection}{\numberline {1.1}secondary Dirac points}{2}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Hofstadter Butterfly}{2}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.3}Brown-zak oscillations}{2}{subsection.1.3}
+\contentsline {subsection}{\numberline {1.4}Valley polarized currents}{2}{subsection.1.4}
+\contentsline {subsection}{\numberline {1.5}interlayer coupling}{2}{subsection.1.5}
