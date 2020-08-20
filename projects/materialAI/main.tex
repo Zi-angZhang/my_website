@@ -1,6 +1,6 @@
-%        File: index.tex
-%     Created: Thu Aug 13 04:00 PM 2020 +0
-% Last Change: Thu Aug 13 04:00 PM 2020 +0
+%        File: main.tex
+%     Created: Tue Aug 18 03:00 PM 2020 +0
+% Last Change: Tue Aug 18 03:00 PM 2020 +0
 %
 \documentclass[a4paper, 11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -67,7 +67,7 @@
 	urlcolor=bluegrey,
 }
 
-\title{DFT notes}
+\title{Material Science \& Artificial Intelligence}
 \author{Ziang Zhang \\ \texttt{ziang.zhang@kaust.edu.sa}}
 \date{\today}
 
@@ -76,28 +76,18 @@
 \maketitle
 \tableofcontents
 
-\section{Lecture by Kohn: wave functions and density functionals}
+\section{Preface}
 
-The initial work on DFT was reposted in two publications: the first with Hohenberg \cite{hohenberg_inhomogeneous_1964} and the second with Sham \cite{kohn_self-consistent_1965}. That was almost 40 years after Schr{\"o}dinger published his first epoch-making paper marking the beginning of wave mechanics. The most redimentary form of DFT was proposed by Fermi in 1927, namely \textbf{Thomas-Fermi model}. 
+Artificial Intelligence (AI) is growing rapidly as the computer industry emerging. Tons of deep learning algorithms are developed to solve daily issues but few, compared to hot fields, i.e. Computer Vision. The initial purpose of this project is to review the existing methods of machine learning working with material science. The origin of this field can date back to long long ago, years before deep learning fever.
 
+\section{available packages}
 
-The motion of the electrons is correlated by the Pauli Exclusion principle. The electrons with parallel spins, must maintain a certain seperation. The anti-parallel spin electrons keep apart to lower their mutiual coulomb replusion. Se we can gain energy in two ways. Moving parallel spin electrons apart will lower the exchange energy, moving anti-parallel spins apart will lower the correlation energy.
+\subsection{USPEX}
 
-We can write the total energy of our system in terms of which are all functionals of the charge density. These terms are:
+ The full name of \textbf{USPEX} is ``Universal Structure Predictor: Evolutionary Xtallography''. Official website: https://uspex-team.org. 
 
-\begin{itemize}
-  \item Ion-electron potential energy
-  \item Ion-ion potential energy
-  \item electron-electron energy
-  \item kinetic energy
-  \item exchange-correlation energy
-\end{itemize}
+ USPEX code solves ``chemical composition to crystalline solids'' problems.  In addition to crystal structure prediction, USPEX can work in other dimensionalities and predict the structure of nanoparticles, polymers, surfaces, interfaces and 2D-crystals. It can predict stable chemical compositions and corresponding crystal structures, given just the names of the chemical elements.
 
-The two difficule terms to calculate here are the kinetic energy and the exchange correlation energy.
-
-\subsubsection{kinetic energy}
-
-Kohn and Sham introduced a set of orbitals from which the electron density can be calculated. These \textbf{Kohn-Sham orbitals} do not, in general, correspond to the actual electron orbitals. Likewise, the Kohn-Sham eigenvalues  are not ingeneral the same as the real energy levels. The only connection the Kohn-Sham orbitals necessarily have to the real electronic wavefunctions is that they both give rise to the same charge density. 
 \newpage
 \bibliography{references}
 \end{document}
