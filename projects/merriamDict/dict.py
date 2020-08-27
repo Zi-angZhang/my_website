@@ -4,15 +4,25 @@ import urllib.request as request
 import sys
 from bs4 import BeautifulSoup
 
-html = request.urlopen(f'https://www.merriam-webster.com/dictionary/{sys.argv[1]}').read()
+def search(word):
+    html = request.urlopen(f'https://www.merriam-webster.com/dictionary/{word}').read()
 
-soup = BeautifulSoup(html, 'html.parser')
-rough_box = soup.find_all('div', {'id': 'dictionary-entry-1'})
+    soup = BeautifulSoup(html, 'html.parser')
+    rough_box = soup.find_all('div', {'id': 'dictionary-entry-1'})
 
-definitions = rough_box[0].find_all('span', {'class': 'dtText'})
+    definitions = rough_box[0].find_all('span', {'class': 'dtText'})
 
-for definition in definitions:
-    print(definition.text)
+    for definition in definitions:
+        print(definition.text)
 
 
-print('-------------------------------------------------')
+    print('-------------------------------------------------')
+if len(sys.argv) == 1:
+    while True:
+        word = input('word: ')
+        search(word)
+
+else:
+    word = sys.argv[1]
+    search(word)
+

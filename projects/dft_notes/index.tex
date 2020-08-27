@@ -76,6 +76,39 @@
 \maketitle
 \tableofcontents
 
+The core concerpt of density functional theory is the observation that, if $E$ is the lowest possible energy of the system, i.e. the energy of the ground state, then $E$ is a functional of the electron density only:
+
+\begin{equation}
+  E = F[n]
+\end{equation}
+
+\section{capabilities and limits of DFT}
+
+A non-exhaustive list of material properties which can be calculated with good accuracy using DFT would include:
+
+\begin{itemize}
+  \item equilibrium structures
+  \item vibrational properties and vibrational spectra
+  \item binding energies of molecules and cohesive energies of solids
+  \item ionization potential and electron affinity of molecules
+  \item band structures of metals and semiconductors
+\end{itemize}
+
+On the other hand, material properties which cannot be calculated reliably using DFT include:
+
+\begin{itemize}
+  \item electronic band gaps of semiconductors and insulators
+  \item magnetic properties of Mott-Hubbhard insulators (most systems with atomic-like localized $d$ of $f$ electronics states)
+  \item bonding and sturcture in sparse matter, e.g. proteins, where van der Walls forces are important
+\end{itemize}
+
+The study of soft materials and biomaterials, such as plastics and proteins, requires the determination of equailibrium structures in systems which do not form strong bonds (such as ionic, metallic, or covalent bonds) and hold together due to weak \textit{van der Walls} force. There is currently a large research activity aimed at extending the scope of DFT calculations to the case of van der Waals interactions.
+
+
+
+Generally speaking, in the case of finite systems such as molecules and clusters, the LDA yields an exchange poteneial which is too short-ranged. This is well-known deficency of the LDA, and can manifest it self as the inabilityu of the LDA to predict stable negatively charged atoms or molecules. This is particular important in the atomistic study of biological process.
+
+
 \section{Lecture by Kohn: wave functions and density functionals}
 
 The initial work on DFT was reposted in two publications: the first with Hohenberg \cite{hohenberg_inhomogeneous_1964} and the second with Sham \cite{kohn_self-consistent_1965}. That was almost 40 years after Schr{\"o}dinger published his first epoch-making paper marking the beginning of wave mechanics. The most redimentary form of DFT was proposed by Fermi in 1927, namely \textbf{Thomas-Fermi model}. 
@@ -98,6 +131,67 @@ The two difficule terms to calculate here are the kinetic energy and the exchang
 \subsubsection{kinetic energy}
 
 Kohn and Sham introduced a set of orbitals from which the electron density can be calculated. These \textbf{Kohn-Sham orbitals} do not, in general, correspond to the actual electron orbitals. Likewise, the Kohn-Sham eigenvalues  are not ingeneral the same as the real energy levels. The only connection the Kohn-Sham orbitals necessarily have to the real electronic wavefunctions is that they both give rise to the same charge density. 
+
+\section{Degenerate Fermion Systems}
+
+At low temperatures, particles have less energy, fewer quantums are available and average occupation number of each state increases. Then the exclusion principle become essential: the available levels up to some maximum energy ( determinde by the density) are, on average, nearly filled; higher levels are, on average, nearly empty. Such systems are then termed ``degenerate, '' hence the title of the section. Actually the statements are strictly true only at zero temperature and when the mutual interzactions of the fermions are ignored.
+
+The maximum energy of a filled level is known as the \textbf{Fermi energy} ($E_F$). A collection of degenerate fermions is often refereed to as a Fermi gas, and sometimes, picturesquely, as a ``Fermi sea,'' though the sea only exists in energy space rather than configuration space. 
+
+Thermal effects are small when the thermaldynamic temperature of the system is far lower than Fermi temeperature $T_F = E_F/k$. \footnote{Boltzmann constant is the proportionality factor that relates the average relative kinetic energy of particles in a gas and the thermodynamic temperature of the gas.} 
+
+
+  \subsection{natural units}
+
+    ``Normally'' we use the centimetre-gram-second system of units (cgs units) as the basis to measure physical quantities. The choose of the basis is not unique, so its possible to transfer our familiar unit to the natural units which have energy, $\hbar$, and speed light $c$ as basis.
+
+    \begin{equation}
+      \begin{aligned}
+      \label{eq:natural-quantities}
+      \hbar &= \frac{h}{2\pi} = 1.05 \times 10^{-27} \textrm{g cm}^2 \textrm{sec} ^{-1}\\
+      c &= 3 \times 10 ^{10} \textrm{cm sec}^{-1}\\
+      eV &= 1.6 \times 10 ^{-12} \textrm{g cm}^2 \textrm{sec}^{-2}
+    \end{aligned}
+  \end{equation}
+
+    Transformation of units can easily done by substitute the cgs units with the following natural units:
+
+    \begin{equation}
+      \begin{aligned}
+	[\textrm{time}] &= (eV) ^{-1} \hbar\\
+	[\textrm{length}] &= (eV) ^{-1} \hbar c\\
+	\left[ weight \right] &= eV c^{-2}
+      \end{aligned}
+    \end{equation}
+
+    One useful constant we would use in the following contents is the weight of a electron, note here we supressed the speed and Planck's constant:
+
+    \begin{equation}
+      m_e = 511  \textrm{keV}
+    \end{equation}
+
+    If we want the momentum of a electron with energy 10 eV:
+
+    \begin{equation}
+      p = \sqrt{2 m E} = (2 \times 511 \textrm{keV} \times 10 \textrm{eV}) ^{1/2} = 3.2 keV
+    \end{equation}
+
+    One interesting fact is that the square of the electron's charge is dimensionless when measured in natural units:
+
+    \begin{equation}
+      e ^2 = 1/137 (\hbar c)
+    \end{equation}
+
+    Actually $e^2 / (\hbar c) \equiv \alpha$ is known as the fine structure constant. The measured value of $\alpha$ is $(137.0359895)^{-1}$.
+
+  \subsection{case study: one electron in a box}
+
+    The simplest system with which to begin a study of degenerate fermions is a collection of identical, spin 1/2 fermions confined to a cude of side $l$ by a boundary condition $\psi = 0$. 
+
+
+
+
+
 \newpage
 \bibliography{references}
 \end{document}
