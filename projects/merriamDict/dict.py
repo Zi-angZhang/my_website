@@ -1,19 +1,24 @@
 #!/home/pdfexe/anaconda3/envs/spider/bin/python
 
 import urllib.request as request
+from urllib.error import HTTPError
 import sys
 from bs4 import BeautifulSoup
 
 def search(word):
-    html = request.urlopen(f'https://www.merriam-webster.com/dictionary/{word}').read()
+    try:
+        html = request.urlopen(f'https://www.merriam-webster.com/dictionary/{word}').read()
 
-    soup = BeautifulSoup(html, 'html.parser')
-    rough_box = soup.find_all('div', {'id': 'dictionary-entry-1'})
+        soup = BeautifulSoup(html, 'html.parser')
+        rough_box = soup.find_all('div', {'id': 'dictionary-entry-1'})
 
-    definitions = rough_box[0].find_all('span', {'class': 'dtText'})
+        definitions = rough_box[0].find_all('span', {'class': 'dtText'})
+        definitions = [definition.text for definition in definitions]
+    except HTTPError:
+        definitions = ['404 not found']
 
     for definition in definitions:
-        print(definition.text)
+        print(definition)
 
 
     print('-------------------------------------------------')
