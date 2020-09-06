@@ -9,14 +9,14 @@ radius_inner = 4.5 #cm
 height = 5 #cm
 
 spatial_resolution = 1 #1/10 cm
-angle_resolution = 2 #1/2 degree
+angle_resolution = 3 #1/2 degree
 
 inner_split = 12
 curves_height = .3 #amplitude of side curves
 
 def out_path(theta, z):
-    x = radius_outer * cos(theta)
-    y = radius_outer * sin(theta)
+    x = radius_outer * cos(theta) + (radius_outer-radius_inner-0.4) * sin(z*30+theta*inner_split*3)
+    y = radius_outer * sin(theta) + (radius_outer-radius_inner-0.4) * cos(z*30+theta*inner_split*3)
     return (x, y, z)
 
 def inner_path(theta, z):
