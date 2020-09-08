@@ -15,8 +15,8 @@ inner_split = 12
 curves_height = .3 #amplitude of side curves
 
 def out_path(theta, z):
-    x = radius_outer * cos(theta) + (radius_outer-radius_inner-0.4) * sin(z*30+theta*inner_split*3)
-    y = radius_outer * sin(theta) + (radius_outer-radius_inner-0.4) * cos(z*30+theta*inner_split*3)
+    x = radius_outer * cos(theta) + (radius_outer-radius_inner-0.4) * sin(z*15+theta*inner_split*3)
+    y = radius_outer * sin(theta) + (radius_outer-radius_inner-0.4) * cos(z*15+theta*inner_split*3)
     return (x, y, z)
 
 def inner_path(theta, z):
