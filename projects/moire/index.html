@@ -8,7 +8,7 @@
 	<h1>moire pattern</h1>
 
     <script src='canvas.js'></script>
-    <div>
+    <div id="configures">
         size
         <input type="number" id='size-control' value=10>
         shift_x
@@ -19,13 +19,20 @@
         <input type="number" id='rotate' value=0>
         degree
 
-        <button type='button' onclick='layerDraw()'>submit</button>
+        <button id='submit' type='button' onclick='layerDraw()'>submit</button>
     </div>
 	<canvas id="moireCanvas" width="1800" height="1800" style="border:1px solid #000000"> </canvas>
     <h2>interesting papers</h2>
     <ol>
     	<li><a href="notes.html">Notes</a></li>
     </ol>
+    <script type="text/javascript">
+        moireConfig = document.getElementById("configures");
+        moireConfig.addEventListener("keyup", function(event){
+        if (event.keyCode === 13){
+            document.getElementById("submit").click();
+        }});
+    </script>
 
 </body>
 </html>
