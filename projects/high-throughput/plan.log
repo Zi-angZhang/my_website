@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=latex 2019.6.6)  10 SEP 2020 13:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=latex 2019.6.6)  10 SEP 2020 13:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -7,8 +7,8 @@ de"##1"{\Link##1}\expandafter\HCode\else\expandafter\Link\fi}\def\Link#1.a.b.c.
 {\g@addto@macro\@documentclasshook{\RequirePackage[#1,html]{tex4ht}}\let\HCode\
 documentstyle\def\documentstyle{\let\documentstyle\HCode\expandafter\def\csname
  tex4ht\endcsname{#1,html}\def\HCode####1{\documentstyle[tex4ht,}\@ifnextchar[{
-\HCode}{\documentstyle[tex4ht]}}}\makeatother\HCode .a.b.c.\input  notes
-(./notes.tex (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+\HCode}{\documentstyle[tex4ht]}}}\makeatother\HCode .a.b.c.\input  plan.tex
+(./plan.tex (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size11.clo
 File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
@@ -922,18 +922,18 @@ version 2017-05-09-09:21
 ) (/usr/share/texlive/texmf-dist/tex/generic/tex4ht/tex4ht.sty
 version 2018-02-11-15:01
 
---- needs --- tex4ht notes ---
+--- needs --- tex4ht plan ---
 \tmp:cnt=\count141
-\openout15 = `notes.tmp'.
+\openout15 = `plan.tmp'.
 
-(./notes.tmp)
+(./plan.tmp)
 \tmp:dim=\skip49
 --------------------------------------
 --- Note --- for XML code, use the command line option `xml' or `xhtml'
 --------------------------------------
- (./notes.xref)
+ (./plan.xref)
 \:refout=\write4
-\openout4 = `notes.xref'.
+\openout4 = `plan.xref'.
 
 
 (/usr/share/texlive/texmf-dist/tex/generic/tex4ht/html4.4ht
@@ -1029,10 +1029,10 @@ version 2017-03-30-16:04
 --- Note --- for linear crosslinks of pages, use the command line option `next'
 
 --------------------------------------
-\openout15 = `notes.4ct'.
+\openout15 = `plan.4ct'.
 
 \:tocout=\write5
-\openout5 = `notes.4tc'.
+\openout5 = `plan.4tc'.
 
 
 (/usr/share/texlive/texmf-dist/tex/generic/tex4ht/html4.4ht
@@ -1352,8 +1352,8 @@ version 2018-02-21-09:31
 )
 (/usr/share/texlive/texmf-dist/tex/generic/tex4ht/html4-math.4ht
 version 2017-03-30-16:04
-)) (./notes.aux)
-\openout1 = `notes.aux'.
+)) (./plan.aux)
+\openout1 = `plan.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 75.
 LaTeX Font Info:    ... okay on input line 75.
@@ -1375,40 +1375,25 @@ Package hyperref Info: Link coloring ON on input line 75.
 LaTeX Info: Redefining \ref on input line 75.
 LaTeX Info: Redefining \pageref on input line 75.
 LaTeX Info: Redefining \nameref on input line 75.
---- file notes.css ---
- [1
+--- file plan.css ---
+[1
 
-] [2] (./notes.4ct) [3]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 92.
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 92.
- [4]
---- file notes2.html ---
+] [2] (./plan.4ct) [3] [4]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 87.
  [5]
---- file notes3.html ---
- [6
-
-] [7]
-[8] (./notes.bbl) [9]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 182.
- [10]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 182.
- (./notes.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 182.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 182.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 182.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 87.
+ (./plan.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 87.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 87.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 87.
  ) 
 Here is how much of TeX's memory you used:
- 21515 strings out of 492983
- 370242 string characters out of 6134923
- 568666 words of memory out of 5000000
- 24580 multiletter control sequences out of 15000+600000
- 10691 words of font info for 39 fonts, out of 8000000 for 9000
+ 21365 strings out of 492983
+ 368102 string characters out of 6134923
+ 566416 words of memory out of 5000000
+ 24439 multiletter control sequences out of 15000+600000
+ 8591 words of font info for 32 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,6n,72p,1201b,548s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,6n,72p,902b,548s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on notes.dvi (10 pages, 30880 bytes).
+Output written on plan.dvi (5 pages, 12664 bytes).
