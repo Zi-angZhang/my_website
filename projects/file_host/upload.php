@@ -37,7 +37,7 @@ if ($uploadOk == 0) {
     chmod($target_file, 0764);
     echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
   } else {
-    echo "Sorry, there was an error uploading your file.";
+    echo "Sorry, there was an error uploading your file." .$_FILES["fileToUpload"]["tmp_name"];
   }
 }
 ?>
