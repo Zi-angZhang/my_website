@@ -1,7 +1,6 @@
 <?php
 $target_dir = "contents/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
-echo $target_file;
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
@@ -27,7 +26,6 @@ if ($_FILES["fileToUpload"]["size"] > 500000000) {
   echo "Sorry, your file is too large.";
   $uploadOk = 0;
 }
-
 // Check if $uploadOk is set to 0 by an error
 if ($uploadOk == 0) {
   echo "Sorry, your file was not uploaded.";
@@ -40,4 +38,5 @@ if ($uploadOk == 0) {
     echo "Sorry, there was an error uploading your file." .$_FILES["fileToUpload"]["tmp_name"];
   }
 }
+print_r($_FILES["fileToUpload"]["error"]);
 ?>
